@@ -1,4 +1,4 @@
-import { OnInit } from '@angular/core';
+import { Input, OnInit } from '@angular/core';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { User } from './models/User';
@@ -13,7 +13,7 @@ import { UserService } from './services/user.service';
 })
 export class AppComponent implements OnInit {
 
-  user:User;
+@Input() user:User;
 
 constructor(private userService: UserService, private titleService: Title) {
 

@@ -10,6 +10,12 @@ import { HomeBtnComponent } from './home-btn/home-btn.component';
 import { PlateComponent } from './plate/plate.component';
 import { MessageComponent } from './message/message.component';
 import { FoodGroupsModule } from './food-groups/food-groups.module';
+import { NavComponent } from './nav/nav.component';
+import { RegisterComponent } from './register/register.component';
+import { DefaultComponent } from './components/default/default.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ExercisesComponent } from './exercises/exercises.component';
+import { FarmersMarketsComponent } from './farmers-markets/farmers-markets.component';
 
 
 @NgModule({
@@ -19,8 +25,14 @@ import { FoodGroupsModule } from './food-groups/food-groups.module';
     MainComponent, 
     HomeBtnComponent, 
     PlateComponent, 
-    MessageComponent],
+    MessageComponent, 
+    NavComponent, 
+    RegisterComponent, 
+    DefaultComponent, 
+    ExercisesComponent, 
+    FarmersMarketsComponent],
   imports: [
+    AppRoutingModule,
     CommonModule,
     BrowserModule,
     FoodGroupsModule

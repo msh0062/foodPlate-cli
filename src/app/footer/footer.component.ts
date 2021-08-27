@@ -19,6 +19,10 @@ export class FooterComponent implements OnInit, OnDestroy {
     alert('for more info see choosemyplate.gov')
   }
 
+  clearGoal(): void {
+    this.todaysGoalSvce.clearGoal();
+  }
+
   constructor(private todaysGoalSvce: TodaysGoalService) { 
     this.subscription = this.todaysGoalSvce.getGoal().subscribe(goal => {
       this.goal = goal;

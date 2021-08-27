@@ -17,6 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ExercisesComponent } from './exercises/exercises.component';
 import { FarmersMarketsComponent } from './farmers-markets/farmers-markets.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TodaysGoalComponent } from './todays-goal/todays-goal.component';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegisterComponent, 
     DefaultComponent, 
     ExercisesComponent, 
-    FarmersMarketsComponent],
+    FarmersMarketsComponent, TodaysGoalComponent],
   imports: [
     AppRoutingModule,
     CommonModule,

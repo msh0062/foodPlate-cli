@@ -8,7 +8,11 @@ import { VegetableDetailComponent } from './vegetable-detail/vegetable-detail.co
 
 
 @NgModule({
-  declarations: [FruitDetailComponent, GrainsDetailComponent, ProteinDetailComponent, VegetableDetailComponent],
+  declarations: [FruitDetailComponent, 
+                GrainsDetailComponent, 
+                ProteinDetailComponent, 
+                VegetableDetailComponent
+              ],
   imports: [
     CommonModule
   ]

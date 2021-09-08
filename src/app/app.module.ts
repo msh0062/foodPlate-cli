@@ -41,7 +41,6 @@ import { FoodComponent } from './food/food.component';
     AppRoutingModule,
     CommonModule,
     BrowserModule,
-    FoodGroupsModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule

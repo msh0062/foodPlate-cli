@@ -1,6 +1,9 @@
-<section class="initScreen">
+<section *ngIf="errorMessage"> 
+  {{ errorMessage }}
+</section>
+<section class="initScreen" *ngIf="allGoals?.length > 0" >
     <ul>
-      <li>
+      <li *ngFor="let goal of allGoals">
         <div>
           <img src="assets/images/icons/pencil.png"
                id="editIcon"
@@ -9,7 +12,7 @@
                id="deleteIcon"
                class="icon buffer">
           <input class="checkboxLg" type="checkbox">
-          <label> </label>
+          <label> {{ goal.goalTitle }}</label>
         </div>
       </li>
     </ul>

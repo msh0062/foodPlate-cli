@@ -22,7 +22,7 @@ export class MainComponent implements OnInit {
 
   getRoute() {
     if (!this.currentUser.registered) {
-      this.routerLink = 'registered';
+      this.routerLink = 'register';
     } else if(this.currentUser.registered) {
       this.routerLink = 'myPlate';
     }

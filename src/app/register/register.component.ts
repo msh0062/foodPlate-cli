@@ -1,3 +1,4 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -17,6 +18,12 @@ currentUser: User;
 ageGroups = ['select your age group', '2-3', '4-8', '9-13', '14-18', '19-30',
 '31-50', '51+'];
 regForm: FormGroup;
+submit: boolean;
+
+canDeactivate(): boolean {
+  console.log(!this.regForm.touched);
+  return !this.regForm.touched || this.submit;
+}
 
 constructor(private userService: UserService, 
   private fb: FormBuilder, 
@@ -26,12 +33,14 @@ constructor(private userService: UserService,
       'email' : [null, [Validators.compose([Validators.required, Validators.email])]],
       'gender' : [null, [Validators.required]],
       'ageGroup' : [null, [Validators.required]]
-      }, { updateOn: 'blur'});
+      }/* , { updateOn: 'blur'} */);
   }  
 
   onSubmit(formValues) {
+      this.submit = true;
       this.userService.updateUser(formValues);
       UserService.storeUserLocal(formValues);
+      this.router.navigate(['myPlate']);
    }
 
   ngOnInit(): void {
